@@ -1,0 +1,4 @@
+Actualizar titulo:
+
+curl -X POST http://localhost:5000/set-title -H "Content-Type: application/json" -d '{"title": "Camaron que se duerme"}'
+{"message":"Title updated","status":"success"}
