@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">WebSocket con Flask</title>
+</head>
+<body>
+    <h1 id="title">WebSocket con Flask</h1>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        // Actualizar el título de la página al recibir un mensaje del servidor
+        socket.on('update_title', function(data) {
+            document.getElementById('title').innerText = data.title;
+            document.getElementById('page-title').innerText = data.title;
+        });
+    </script>
+</body>
+</html>
